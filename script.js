@@ -2,6 +2,7 @@ let form = document.querySelector('form');
 let button = document.querySelector('input[type="button"]');
 //console.log(form);
 
+
 let nom = document.querySelector('#nom');
 let prenom = document.querySelector('#prenom');
 let nationalite = document.querySelector('#nationalite');
@@ -68,6 +69,25 @@ button.addEventListener('click', function(e) {
    
     
     tbody.appendChild(tr);
+
+    //remove tr if delete click
+    
+
+
+i7.addEventListener('click', function(e) {
+    console.log(e.target);
+    trToRemove = e.target.parentNode.parentNode;
+    console.log(trToRemove);
+    trToRemove.remove();
+    
+}
+)
+
+   form.reset(); //reset form
    
 });
+
+//console.log(document);
+
+
 
